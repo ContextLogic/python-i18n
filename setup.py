@@ -10,10 +10,10 @@ setup(
     url='https://github.com/tuvistavie/python-i18n',
     download_url='https://github.com/tuvistavie/python-i18n/archive/master.zip',
     license='MIT',
-    packages=['i18n', 'i18n.loaders', 'i18n.tests'],
+    packages=['python_i18n', 'python_i18n.loaders', 'python_i18n.tests'],
     include_package_data=True,
     zip_safe=True,
-    test_suite='i18n.tests',
+    test_suite='python_i18n.tests',
     extras_require={
         'YAML': ["pyyaml>=3.10"],
     },

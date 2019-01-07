@@ -6,11 +6,11 @@ import unittest
 import os
 import os.path
 
-from i18n import resource_loader
-from i18n.resource_loader import I18nFileLoadError
-from i18n import config
-from i18n.config import json_available, yaml_available
-from i18n import translations
+from python_i18n import resource_loader
+from python_i18n.resource_loader import I18nFileLoadError
+from python_i18n import config
+from python_i18n.config import json_available, yaml_available
+from python_i18n import translations
 
 
 RESOURCE_FOLDER = os.path.join(os.path.dirname(__file__), "resources")

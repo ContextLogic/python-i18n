@@ -6,10 +6,10 @@ import unittest
 import os
 import os.path
 
-from i18n import resource_loader
-from i18n.translator import t
-from i18n import translations
-from i18n import config
+from python_i18n import resource_loader
+from python_i18n.translator import t
+from python_i18n import translations
+from python_i18n import config
 
 RESOURCE_FOLDER = os.path.dirname(__file__) + os.sep + 'resources' + os.sep
 

@@ -1,8 +1,8 @@
 import unittest
 
-from i18n.tests.translation_tests import TestTranslationFormat
+from python_i18n.tests.translation_tests import TestTranslationFormat
 
-from i18n.tests.loader_tests import TestFileLoader
+from python_i18n.tests.loader_tests import TestFileLoader
 
 
 def suite():
