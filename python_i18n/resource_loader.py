@@ -82,6 +82,10 @@ def load_translation_dic(dic, namespace, locale):
             translations.add(namespace + key, value, locale)
 
 
+def load_i18n(locale_dic, namespace):
+    for locale, dic in locale_dic.iteritems():
+        load_translation_dic(dic, namespace, locale)
+
 def load_directory(directory, locale=config.get('locale')):
     for f in os.listdir(directory):
         path = os.path.join(directory, f)
