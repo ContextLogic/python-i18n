@@ -19,13 +19,17 @@ class TranslationFormatter(Template):
 
 
 def t(key, **kwargs):
+    namespace = kwargs.pop('_namespace', '')
+    real_key = key
+    if namespace:
+        real_key = namespace + config.get('namespace_delimiter') + key
     locale = kwargs.pop('locale', config.get('locale'))
-    if translations.has(key, locale):
-        return translate(key, locale=locale, **kwargs)
+    if translations.has(real_key, locale):
+        return translate(real_key, locale=locale, **kwargs)
     else:
         resource_loader.search_translation(key, locale)
-        if translations.has(key, locale):
-            return translate(key, locale=locale, **kwargs)
+        if translations.has(real_key, locale):
+            return translate(real_key, locale=locale, **kwargs)
         elif locale != config.get('fallback'):
             return t(key, locale=config.get('fallback'), **kwargs)
     if 'default' in kwargs:

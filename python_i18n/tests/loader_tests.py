@@ -142,6 +142,6 @@ class TestFileLoader(unittest.TestCase):
         resource_loader.search_translation("foo")
         self.assertTrue(translations.has("foo"))
 
-
-suite = unittest.TestLoader().loadTestsFromTestCase(TestFileLoader)
-unittest.TextTestRunner(verbosity=2).run(suite)
+if __name__=='__main__':
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestFileLoader)
+    unittest.TextTestRunner(verbosity=2).run(suite)
